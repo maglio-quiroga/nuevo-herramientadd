@@ -1,0 +1,130 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+.b-imagen{
+    height: 81vh;
+}
+.boton-nav{
+    border-radius: 25px;
+    background-color:#0d6efd;
+    color: white;
+    border: solid white;
+}
+.boton-nav:hover{
+    background-color: rgb(253, 253, 253);
+    color: black;
+    transition: 0,45s;
+}
+.link{
+    color: white;
+}
+.link:hover{
+    color: rgb(211, 211, 211);
+}
+.c-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.titulo{
+    color: white;
+    background-color: #0d6efd;
+    border-radius: 27px;
+}
+.titulo2{
+    color: white;
+    background-color:#0d6efd; 
+    height: 10vh;
+}
+.titulo3{
+    color: white;
+    background-color: #0d6efd;
+}
+.marcas{
+    display: flex;
+    justify-content: center;
+}
+.marca{
+    height: 60vh;
+    width: 60vh;
+    border: solid #0d6efd;
+}
+.tienda{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(imagenes/fotoheader.jpg);
+    height: 77vh;
+    
+}
+.tienda h2{
+    color: white;
+}
+.t-video{
+    width: 90vh;
+}
+.main{
+    background-color: #0d6efd;
+    height: 105vh;
+}
+
+.video{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.img-redes{
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+    margin-top: 5px;
+}
+.fot{
+    color: white;
+    background-color: #0d6efd;
+    
+}
+.enlace{
+    color: white;
+}
+.enlace:hover{
+    color:rgb(211, 211, 211);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+}
+.login input,button{
+    border-radius: 50px;
+    height: 7vh;
+}
+.login button:hover{
+    color: #0d6efd;
+}
+.forgot a{
+    color: #0d6efd;
+}
+.forgot a:hover{
+    color: #609efa;
+}
+.login2{
+    display: flex;
+    flex-direction: column;
+}
+.login2 input{
+
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+    
+}
+.login2 button:hover{
+    color: #0d6efd;
+}
+.login3{
+    display: flex;
+    flex-direction: column;
+    
+}
