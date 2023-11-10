@@ -1,3 +1,11 @@
+<?php
+
+if (isset($_GET['user'])) {
+    $mensaje = $_GET['user'];
+    // Haz algo con el mensaje
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +29,21 @@
       <div>
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link link" href="#">Inicio</a>
+            <a class="nav-link link" href="index.php">Inicio</a>
         </li>
         
         <li class="nav-item">
           <a class="nav-link link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item">
+        <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <?php echo $mensaje;?>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.php">Cerrar sesion</a></li>
+        </ul>
+        </div>
         </li>
         <button type="button" class="boton-nav boton-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Registrarse
@@ -54,8 +72,7 @@
                             <div class="forgot" >
                                 <div class="flex-f">
                                     <p>No tienes cuenta?</p>
-                                    <a href="crear-cuenta.html" class="enlace">Registrate</a>
-                                    <br>
+                                    <a href="crear-cuenta.html" class="enlace">Registrate</a><br>
                                     <a href="recuperar-clave.php" class="enlace">Recuperar Clave</a>
                                 </div>                        
                             </div>

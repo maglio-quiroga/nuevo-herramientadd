@@ -102,7 +102,8 @@ $consulta=mysqli_query($conexion,$sql);
                       </thead>
                       <tbody>
                           <?php 
-                            while($fila=mysqli_fetch_array($consulta)){
+                           # while($fila=mysqli_fetch_array($consulta)){
+                            while($fila=$consulta->fetch_assoc()){
                           ?>
                           <tr>
                             <th><?php  echo $fila['email'] ?></th>
@@ -112,13 +113,16 @@ $consulta=mysqli_query($conexion,$sql);
                             <th><?php  echo $fila['genero'] ?></th>
                             <th><?php  echo $fila['productos'] ?></th>
                             <th><a href="crud-act.php?id=<?php  echo $fila['email'] ?>" class="btn btn-info">Actualizar</a></th>
+                            <th><a href="crud-del.php?id=<?php  echo $fila['email'] ?>" class="btn btn-danger">Eliminar</a></th>
+
+                           <!--
                             <th>
-                              <!-- Button trigger modal -->
+                              
                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                   Eliminar
                                 </button>
 
-                                <!-- Modal -->
+                                
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                   <div class="modal-dialog">
                                     <div class="modal-content">
@@ -127,16 +131,17 @@ $consulta=mysqli_query($conexion,$sql);
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
-                                        Estas a punto de eliminar el usuario <?php echo $fila['nombre']?>
+                                        Estas a punto de eliminar el usuario <?php #echo $fila['nombre']?>
                                       </div>
                                       <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <a href="crud-del.php?id=<?php  echo $fila['email'] ?>" class="btn btn-warning">Eliminar</a>
+                                        <a href="crud-del.php?id=<?php  #echo $fila['email'] ?>" class="btn btn-warning">Eliminar</a>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                             </th>
+                            -->
                           </tr>
                           <?php
                             }
