@@ -1,3 +1,14 @@
+<?php
+
+  if(isset($_GET['enviar'])){
+    session_start();
+    $_SESSION['email']=htmlentities($_GET['correo']);
+    $_SESSION['pass']=htmlentities($_GET['pass']);
+    header("Location:iniciar-sesion.php");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +51,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="iniciar-sesion.php">
+                    <form method="GET">
                         <div class="form">
                             <h1>Iniciar Sesion</h1>
                             <div class="login" >
@@ -48,7 +59,7 @@
                                 <br>
                                 <input type="password" placeholder="Clave" value="" name="pass">
                                 <br>
-                                <button type="submit">Iniciar sesion</button>
+                                <button type="submit" name="enviar">Iniciar sesion</button>
                                 <br>
                             </div>
                             <div class="forgot" >

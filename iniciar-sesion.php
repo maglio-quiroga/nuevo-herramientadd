@@ -7,8 +7,12 @@ $db ="tarea1";
 
 $conexion = new mysqli($server,$user,$pass,$db);
 
-$email=$_GET['correo'];
-$pass=$_GET['pass'];
+session_start();
+
+$email=$_SESSION['email'];
+$pass=$_SESSION['pass'];
+
+
 
 $sql="SELECT email,pass FROM clientes WHERE email='$email' AND pass='$pass'";
 $consulta=mysqli_query($conexion,$sql);
