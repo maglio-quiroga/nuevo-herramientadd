@@ -18,7 +18,7 @@ $email=$_GET['email'];
 $nueva_clave=$_GET['pass'];
 
 foreach($datos as $valor){
-    if($email==$datos['email']){
+    if($email==$datos['email'] and !empty($nueva_clave)){
         $sql2="UPDATE clientes SET pass='$nueva_clave' WHERE email='$email'";
         $query2=mysqli_query($conexion,$sql2);
         if($query2){

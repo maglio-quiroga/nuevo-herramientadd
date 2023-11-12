@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (isset($_GET['user'])) {
     $mensaje = $_GET['user'];
     // Haz algo con el mensaje
@@ -29,7 +29,7 @@ if (isset($_GET['user'])) {
       <div>
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link link" href="index.php">Inicio</a>
+            <a class="nav-link link" href="index-iniciado.php">Inicio</a>
         </li>
         
         <li class="nav-item">
