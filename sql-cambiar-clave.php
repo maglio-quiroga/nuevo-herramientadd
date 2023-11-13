@@ -15,14 +15,14 @@ $sql="SELECT email FROM clientes WHERE email='$email'";
 $query=mysqli_query($conexion,$sql);
 $datos=mysqli_fetch_array($query);
 
-if($datos){
+if($datos && !empty($nueva_clave)){
     $sql2="UPDATE clientes SET pass='$nueva_clave' WHERE email='$email'";
     $query2=mysqli_query($conexion,$sql2);
     if($query2){
         header("Location:index.php");
     }
 }else{
-
+    header("Location:index.php");
 }
 
 
